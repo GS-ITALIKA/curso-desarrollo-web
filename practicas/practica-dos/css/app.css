@@ -1,0 +1,47 @@
+h1 {
+    font-family: 'Brush Script MT'; 
+    text-align: center;
+    line-height: 1.2;
+    font-weight: 500;
+}
+
+div {
+    margin: 10px;
+}
+
+button {
+    border-radius: 10px;
+    border: 2px solid yellowgreen;
+    min-width: 100px;
+    font-weight: bold;
+    padding: 5px;
+    margin: 10px;
+}
+
+button:hover {
+    color: #fff;
+    background-color: #0080ff;
+    border: 2px solid #0080ff;
+    cursor: pointer;
+}
+
+code {
+    font-family: 'Courier New', monospace; 
+    font-weight: bold;
+    font-size: 1rem;
+    background-color: yellowgreen;
+    padding: 5px;
+    border: 1px solid #ccc
+}
+
+input[type="text"] {
+    font-size: 1rem;
+    border: none;
+    outline: none;
+    border-bottom: 0.2em solid yellowgreen;
+    background: rgba(174, 249, 236, 0.2);
+    border-radius: 0.2em 0.2em 0 0;
+    padding: 0.4em;
+    color: #000000;
+    margin: 10px;
+}
