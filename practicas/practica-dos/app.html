@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Primera práctica del curso Desarrollo Web.">
+        <title>Práctica 2: Almacenamiento Client-Side</title>
+        <link rel="icon" href="./favicon.png" type="image/png">
+        <link rel="preload" as="style" href="./css/app.css" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript>
+            <link rel="stylesheet" type="text/css" href="./css/app.css">
+        </noscript>
+    </head>
+    <body>
+       <div>
+            <form>
+                <div>
+                    <label for="key">Llave:</label>
+                    <input type="text" id="key" name="key" autofocus>
+                    <label for="value">Valor:</label>
+                    <input type="text" id="value" name="value">
+                </div>
+                <div>
+                    <button type="button">Crear</button>
+                    <button type="button">Leer</button>
+                    <button type="button">Eliminar</button>
+                    <button type="button">Eliminar todo</button>
+                </div>
+            </form>
+        </div>
+        <script type="module" src="./js/app.js" defer></script>
+    </body>
+</html>

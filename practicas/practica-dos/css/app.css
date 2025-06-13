@@ -45,3 +45,9 @@ input[type="text"] {
     color: #000000;
     margin: 10px;
 }
+
+label {
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    font-size: 13px;
+}
