@@ -15,16 +15,24 @@
        <div>
             <form>
                 <div>
-                    <label for="key">Llave:</label>
-                    <input type="text" id="key" name="key" autofocus>
-                    <label for="value">Valor:</label>
-                    <input type="text" id="value" name="value">
+                
+                    <label for="key-input">Llave:</label>
+                    <input type="text" id="key-input" name="key" placeholder="Aquí la llave..." autofocus>
+                    
+                    <label for="value-input">Valor:</label>
+                    <input type="text" id="value-input" name="value" placeholder="Aquí el valor...">
+                
                 </div>
                 <div>
-                    <button type="button">Crear</button>
-                    <button type="button">Leer</button>
-                    <button type="button">Eliminar</button>
-                    <button type="button">Eliminar todo</button>
+                    <button type="button" id="create-button">Crear</button>
+                    <button type="button" id="read-button">Leer</button>
+                    <button type="button" id="delete-button">Eliminar</button>
+                    <button type="button" id="clear-button">Eliminar todo</button>
+                </div>
+                
+                <div>
+                    <h2>Resultado:</h2>
+                    <code id="result-code"></code>
                 </div>
             </form>
         </div>
