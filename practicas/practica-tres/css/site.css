@@ -1,0 +1,46 @@
+* {
+    text-align: center;
+    font-family: 'Bangers', 'Comic Sans MS', cursive, sans-serif;
+}
+
+body {
+
+    background: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgba(0, 0, 0, 1) 100%);
+    color: white;
+}
+
+.cover-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+button {
+    background-color: rgb(252, 251, 251);
+    border: 1px solid #ccc;
+    color: black;
+    border-radius: 3px;
+    padding: 10px;
+    margin: 15px;
+}
+
+.image-container {
+    width: 10rem;
+    height: 16rem;
+    border-radius: 5px;
+    padding: 30px;
+    text-align: center;
+}
+
+img {
+    width: 90%;
+    height: 100%;
+}
+
+
+.image-container:hover {
+    opacity: 0.9;
+}
