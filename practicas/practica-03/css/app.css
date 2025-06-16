@@ -1,5 +1,7 @@
 body {
     font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
     background: hsl(228, 33%, 97%);
     margin: 0;
     padding: 10px;
@@ -17,10 +19,17 @@ form {
     border: 1px solid #eee;
 }
 
-input,
+input {
+    display: block;
+    width: 94%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+}
+
 select {
     display: block;
-    width: 90%;
+    width: 100%;
     padding: 10px;
     font-size: 14px;
     border: 1px solid #ccc;
@@ -56,4 +65,12 @@ input[type="reset"] {
 .error {
     color: #d90429;
     font-size: 11px;
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+.form-buttons {
+    margin-top: 20px;
 }

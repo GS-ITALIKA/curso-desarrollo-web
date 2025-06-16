@@ -1,0 +1,76 @@
+body {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    background: hsl(228, 33%, 97%);
+    margin: 0;
+    padding: 10px;
+}
+
+h2 {
+    text-align: center;
+}
+
+form {
+    background: #fff;
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 12px;
+    border: 1px solid #eee;
+}
+
+input {
+    display: block;
+    width: 94%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+}
+
+select {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+}
+
+input[type="checkbox"] {
+    width: auto;
+    display: inline-block;
+}
+
+button {
+    padding: 5px 10px;
+    border: none;
+    background: #007bff;
+    color: #fff;
+    cursor: pointer;
+    margin-right: 4px;
+}
+
+button[type="reset"] {
+    padding: 5px 10px;
+    border: none;
+    background: #dee0e3;
+    color: #000000;
+    cursor: pointer;
+    margin-right: 4px;
+}
+
+input[type="reset"] {
+    background: #888;
+}
+
+.error {
+    color: #d90429;
+    font-size: 11px;
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+.form-buttons {
+    margin-top: 20px;
+}
