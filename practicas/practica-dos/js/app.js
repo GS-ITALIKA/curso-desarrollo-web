@@ -54,25 +54,37 @@ document.addEventListener( 'DOMContentLoaded', ev => {
         Storage.setStore( KEY_INPUT.value, VALUE_INPUT.value );
         Cookie.setStore( KEY_INPUT.value, VALUE_INPUT.value );
         clearForm();
+        alert( 'Valor creado correctamente.' );
     }
 
     READ_BUTTON.onclick = ( ev ) => {
         const value = Storage.getStore( KEY_INPUT.value );
 
-        value ? RESULT_CODE.textContent = `${ KEY_INPUT.value }: ${value}`
-              : RESULT_CODE.textContent = '';
-        
+        if ( value ) {
+            RESULT_CODE.textContent = `${KEY_INPUT.value}: ${value}`
+        } else {
+            RESULT_CODE.textContent = '';
+            alert( `La llave "${KEY_INPUT.value}" no existe.` );
+        }
         clearForm();
     }
     
     DELETE_BUTTON.onclick = ( ev ) => {
-        Storage.deleteStore( KEY_INPUT.value );
-        Cookie.deleteStore( KEY_INPUT.value );
-        clearForm();
+        const value = Storage.getStore( KEY_INPUT.value );
+        if ( value ) {
+            Storage.deleteStore( KEY_INPUT.value );
+            Cookie.deleteStore( KEY_INPUT.value );
+            clearForm();
+        } else {
+            clearForm();
+            alert( `La llave "${KEY_INPUT.value}" no existe.` );
+        }
     }
 
     CLEAR_BUTTON.onclick = ( ev ) => {
         Storage.clearStore();
         Cookie.clearStore();
+        clearForm();
+        alert( 'Se ha limpiado el almacienamiento local y cookies.' );
     }
 } );
