@@ -5,7 +5,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Primera práctica del curso Desarrollo Web.">
-        <title>Práctica 3: Validación de formulario HTML</title>
+        <title>Práctica 4: Validación de formulario DOM</title>
         <link rel="icon" href="./favicon.png" type="image/png">
         <link rel="preload" as="style" href="./css/app.css" onload="this.onload=null;this.rel='stylesheet'">
         <noscript>
@@ -14,31 +14,31 @@
     </head>
 
     <body>
+        <h2>Formulario de registro</h2>
         <form id="registration-form">
-            
             <div class="form-group">
-                <label for="name-text">Usuario</label>
-                <input type="text" id="name-text" name="name" placeholder="Nombre de usuario..." required autofocus>
+                <label for="name-input">Nombre de usuario:</label>
+                <input type="text" id="name-input" name="name" placeholder="Nombre de usuario..." autofocus>
             </div>
             
             <div class="form-group">
-                <label for="password-input">Contraseña</label>
-                <input type="password" id="password-input" name="password" placeholder="Contraseña..." minlength="8" required>
+                <label for="password-input">Contraseña:</label>
+                <input type="password" id="password-input" name="password" placeholder="Contraseña...">
             </div>
             
             <div class="form-group">
                 <label for="email-input">Correo electrónico</label>
-                <input type="email" id="email-input" name="email" placeholder="Correo electrónico..." minlength="8" required>
+                <input type="email" id="email-input" name="email" placeholder="Correo electrónico...">
             </div>
 
             <div class="form-group">
                 <label for="bdate-input">Fecha de nacimiento</label>
-                <input type="date" id="bdate-input" name="bdate" required>
+                <input type="date" id="bdate-input" name="bdate">
             </div>
 
             <div class="form-group">
-                <label for="values-select">Lista de opciones</label>
-                <select name="select" id="values-select" required>
+                <label for="options-select">Lista de opciones</label>
+                <select name="select" id="options-select">
                     <option value="" selected>Selecciona una opción...</option>
                     <option value="1">Opción 1</option>
                     <option value="2">Opción 2</option>
@@ -46,7 +46,8 @@
             </div>
             
             <div class="form-group" style="margin-top: 10px;">
-                <input type="checkbox" name="checkbox" id="checkbox" value="agree" required>Acepto los términos y condiciones.
+                <input type="checkbox" name="checkbox" id="checkbox" value="agree">
+                Acepto los términos y condiciones.
             </div>
 
             <div class="form-buttons">
@@ -54,6 +55,8 @@
                 <button type="reset">Limpiar</button>
             </div>
         </form>
+
+        <script src="./js/index.js" defer></script>
     </body>
 
 </html>

@@ -63,8 +63,9 @@ input[type="reset"] {
 }
 
 .error {
+    margin-top: 5px;
     color: #d90429;
-    font-size: 11px;
+    font-size: 12px;
 }
 
 .form-group {
