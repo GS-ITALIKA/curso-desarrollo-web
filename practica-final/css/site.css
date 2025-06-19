@@ -1,0 +1,94 @@
+/** 
+ * Desarrollo Web | IT Academy
+ * Curso: Desarrollo Web
+ * Práctica Final: Sitio Web de empleados.
+ * Autor: Eric Adalberto Rodríguez Sánchez
+ */
+
+:root {
+    background: #181a1b;
+    color: #f1f1f1;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.form-section {
+    background: #23272a;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+.form-section input,
+.form-section button {
+    padding: 10px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.form-section input {
+    background: #2c2f33;
+    color: #f1f1f1;
+}
+
+.form-section button {
+    background: #7289da;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card {
+    background: #23272a;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 220px;
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px) scale(1.03);
+}
+
+.card h3 {
+    margin: 10px 0 5px 0;
+}
+
+.card p {
+    margin: 0;
+    color: #b9bbbe;
+}
+
+.img-center-round {
+    display: block;
+    margin: 0 auto;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+}
