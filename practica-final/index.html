@@ -1,126 +1,41 @@
 <!DOCTYPE html>
 <html lang="es">
-
+    
     <head>
+    
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Empleados</title>
-        <style>
-            body {
-                background-color: #121212;
-                color: #ffffff;
-                font-family: Arial, sans-serif;
-                text-align: center;
-            }
-
-            .container {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-
-            .card {
-                background-color: #1e1e1e;
-                padding: 20px;
-                margin: 10px;
-                border-radius: 8px;
-                width: 200px;
-                text-align: left;
-            }
-
-            .card h3 {
-                margin-bottom: 10px;
-            }
-
-            .button {
-                background-color: #6200ea;
-                color: #ffffff;
-                padding: 10px 20px;
-                border: none;
-                border-radius: 5px;
-                cursor: pointer;
-                margin-top: 20px;
-            }
-
-            .button:hover {
-                background-color: #3700b3;
-            }
-
-            .form-container {
-                display: none;
-                position: fixed;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                background-color: #1e1e1e;
-                padding: 20px;
-                border-radius: 8px;
-            }
-
-            .close-btn {
-                background-color: #ff1744;
-                color: #ffffff;
-                border: none;
-                padding: 5px 10px;
-                border-radius: 5px;
-                cursor: pointer;
-            }
-        </style>
+        <meta name="description" content="Práctica final del Curso Nivel Plata Desarrollo Web.">
+    
+        <title>Recursos Humanos - Desarrollo Web</title>
+    
+        <link rel="icon" href="./favicon.png" type="image/png">
+        <link rel="preload" as="style" href="./css/site.css" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript>
+            <link rel="stylesheet" type="text/css" href="./css/site.css">
+        </noscript>
+    
     </head>
-
+    
     <body>
-        <h1>Lista de Empleados</h1>
-        <div class="container">
+        
+        <main class="container">
+            <h1>Portal de Recursos Humanos</h1>
+            <hr>
+            <section class="cards" id="employeeCards"></section>
+        </main>
+        
+        <template id="card-template">
             <div class="card">
-                <h3>Juan Pérez</h3>
-                <p>Cargo: Desarrollador</p>
+                <img alt="" class="img-center-round" heigh="72" src="" loading="lazy" width="72">
+                <h2 id="employe-name"></h2>
+                <p><strong>Position:</strong> Developer</p>
+                <p><strong>Email:</strong> alice@example.com</p>
             </div>
-            <div class="card">
-                <h3>María García</h3>
-                <p>Cargo: Diseñadora</p>
-            </div>
-            <div class="card">
-                <h3>María García</h3>
-                <p>Cargo: Diseñadora</p>
-            </div>
-            <div class="card">
-                <h3>María García</h3>
-                <p>Cargo: Diseñadora</p>
-            </div>
-            <div class="card">
-                <h3>María García</h3>
-                <p>Cargo: Diseñadora</p>
-            </div>
-            <div class="card">
-                <h3>María García</h3>
-                <p>Cargo: Diseñadora</p>
-            </div>
-            <div class="card">
-                <h3>María García</h3>
-                <p>Cargo: Diseñadora</p>
-            </div>
-            <div class="card">
-                <h3>María García</h3>
-                <p>Cargo: Diseñadora</p>
-            </div>
-        </div>
-        <button class="button" onclick="openForm()">Agregar Empleado</button>
+        </template>
+        
+        <script src="./js/axios.min.js" defer></script>
+        <script src="./js/index.js" defer></script>
 
-        <div class="form-container" id="form">
-            <h2>Nuevo Empleado</h2>
-            <label>Nombre: <input type="text"></label><br><br>
-            <label>Cargo: <input type="text"></label><br><br>
-            <button class="close-btn" onclick="closeForm()">Cerrar</button>
-        </div>
-
-        <script>
-            function openForm() {
-                document.getElementById( "form" ).style.display = "block";
-            }
-            function closeForm() {
-                document.getElementById( "form" ).style.display = "none";
-            }
-        </script>
     </body>
-
 </html>
