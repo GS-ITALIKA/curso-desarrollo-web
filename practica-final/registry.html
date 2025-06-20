@@ -22,17 +22,18 @@
         <section class="form-section">
             
             <h2>Registrar empleado</h2>
-            <img id="employee-image" alt="" class="img-center-round" heigh="72" src="./images/01.png" loading="lazy" width="72">
-        
-            <form id="registry-form">
-                <input type="text" id="name" placeholder="Full Name" required autofocus>
-                <input type="text" id="position" placeholder="Position" required>
-                <input type="email" id="email" placeholder="Email" required>
-                <select id="title">
-                    <option value="Mr">Mr</option>
-                    <option value="Miss">Miss</option>
-                    <option value="Mrs">Mrs</option>
+            <form id="registry-form" action="#">
+                <img id="employee-image" alt="" class="img-center-round" heigh="72" src="./images/01.png" loading="lazy" width="72">
+                <select id="title" name="title" autofocus required>
+                    <option value="" selected>Tratamiento</option>
+                    <option value="Mr">Señor (Mr.)</option>
+                    <option value="Miss">Señorita (Miss)</option>
+                    <option value="Mrs">Señora (Mrs.)</option>
                 </select>
+                <input type="text" id="first-name" name="first" placeholder="Nombre(s)" required>
+                <input type="text" id="last-name" name="last" placeholder="Apellidos" required>
+                <input type="email" id="email" name="email" placeholder="Correo electrónico" required>
+               
                 <button type="submit">Registrar empleado</button>
             </form>
         

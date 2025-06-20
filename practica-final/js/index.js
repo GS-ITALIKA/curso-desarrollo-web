@@ -6,9 +6,22 @@
  * @description Práctica final del curso.
  */
 
-const CARD_TEMPLATE = document.getElementById( 'card-template' );;
+import * as Storage from '../libs/localStorageManager.js';
 
-async function getEmployees( limit = 10 ) {
+const KEY = 'employees';
+const RESULTS = 5;
+
+async function fromLocalStorage() {
+    const promise = new Promise( function ( resolve ) {
+        let employees = Storage.getStore( KEY );
+        if ( !employees )
+            employees = [];
+        resolve( employees );
+    } );
+    return await promise;
+}
+
+async function fromApi( limit ) {
     const response = await axios.get( `https://randomuser.me/api/?results=${limit}` );
     if ( response.status === 200 ) {
         return response.data.results;
@@ -17,10 +30,46 @@ async function getEmployees( limit = 10 ) {
     }
 }
 
-async function addEmployeeCard( employee ) {
+async function getEmployees( results = 5 ) {
+    let employees = await fromLocalStorage();
+    if ( employees.length === 0 )
+        employees = await fromApi( results );
+    else
+        employees = employees.concat( await fromApi( results ) );
+    return employees;
+}
 
-    const card = CARD_TEMPLATE.content.cloneNode( true );
+function addCard( employee ) {
 
+    const card = document.createElement( 'div' );
+    card.classList.add( 'card' );
+
+    const image = document.createElement( 'img' );
+    image.alt = `${employee.name.title} ${employee.name.first} ${employee.name.last}`;
+    image.classList.add( 'img-center-round' );
+    image.height = 72;
+    image.loading = 'lazy';
+    image.src = employee.picture.medium;
+    image.width = 72;
+
+    card.append( image );
+    
+    const name = document.createElement( 'h3' );
+    name.innerText = `${employee.name.title} ${employee.name.first} ${employee.name.last}`;
+
+    card.append( name );
+
+    const contact = document.createElement( 'p' );
+    contact.classList.add( 'label' );
+
+    card.append( contact );
+
+    const email = document.createElement( 'p' );
+    email.innerText = employee.email;
+
+    card.append( email );
+
+    document.getElementById( 'employee-cards' ).append( card );
 }
 
 function openRegistryForm() {
@@ -29,34 +78,10 @@ function openRegistryForm() {
 
 document.addEventListener( 'DOMContentLoaded', () => {
 
-    getEmployees().then( ( employees ) => {
-
-        const template = /** @type {HTMLTemplateElement} */ (
-            document.getElementById( 'card-template' )
-        );
-
-        employees.forEach( ( employee ) => {
-            const card = /** @type {HTMLTemplateElement} */ (
-                template.content.cloneNode( true )
-            );
-            const img = /** @type {HTMLImageElement} */ (
-                card.querySelector( '#employee-image' )
-            );
-            img.alt = `${employee.name.title} ${employee.name.first} ${employee.name.last}`;
-            img.src = employee.picture.medium;
-
-            const h2 = /** @type {HTMLHeadingElement} */ (
-                card.querySelector( '#employee-name' )
-            );
-            h2.innerText = `${employee.name.title} ${employee.name.first} ${employee.name.last}`;
-
-            const p = /** @type {HTMLParagraphElement} */ (
-                card.querySelector( '#employee-email' )
-            );
-            p.innerText = employee.email;
-
-            document.querySelector( '#employee-cards' )?.append( card );
-
-        } );
+    getEmployees( RESULTS ).then( employees => {
+        employees.forEach( employee => addCard( employee ) );
     } );
+
+    document.getElementById( 'registry-button' )
+        .addEventListener( 'click', () => openRegistryForm() );
 } );

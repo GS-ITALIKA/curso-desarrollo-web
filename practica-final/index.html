@@ -23,21 +23,12 @@
             <h2>Portal de Recursos Humanos</h2>
             <div class="cards" id="employee-cards"></div>
             <div style="display:flex; justify-content:center; margin-top:20px;">
-                <button class="button" onclick='openRegistryForm()'>Registrar empleado</button>
+                <button class="button" id="registry-button">Registrar empleado</button>
             </div>
         </section>
         
-        <template id="card-template">
-            <div class="card">
-                <img id="employee-image" alt="" class="img-center-round" heigh="72" src="" loading="lazy" width="72">
-                <h3 id="employee-name"></h3>
-                <p><strong>Contacto:</strong><p>
-                <p id="employee-email"></p>
-            </div>
-        </template>
-        
         <script src="./js/axios.min.js" defer></script>
-        <script src="./js/index.js" defer></script>
+        <script src="./js/index.js" type="module"></script>
 
     </body>
 </html>
