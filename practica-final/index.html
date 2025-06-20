@@ -19,16 +19,20 @@
     
     <body>
         
-        <main class="container">
-            <h1>Portal de Recursos Humanos</h1>
-            <section class="cards" id="employeeCards"></section>
-        </main>
+        <section class="container">
+            <h2>Portal de Recursos Humanos</h2>
+            <div class="cards" id="employee-cards"></div>
+            <div style="display:flex; justify-content:center; margin-top:20px;">
+                <button class="button" onclick='openRegistryForm()'>Registrar empleado</button>
+            </div>
+        </section>
         
         <template id="card-template">
             <div class="card">
                 <img id="employee-image" alt="" class="img-center-round" heigh="72" src="" loading="lazy" width="72">
-                <h2 id="employee-name"></h2>
-                <p id="employee-email"><strong>Email:</strong></p>
+                <h3 id="employee-name"></h3>
+                <p><strong>Contacto:</strong><p>
+                <p id="employee-email"></p>
             </div>
         </template>
         

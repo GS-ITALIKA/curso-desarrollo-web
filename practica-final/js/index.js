@@ -23,6 +23,10 @@ async function addEmployeeCard( employee ) {
 
 }
 
+function openRegistryForm() {
+    window.location.href = './registry.html';
+}
+
 document.addEventListener( 'DOMContentLoaded', () => {
 
     getEmployees().then( ( employees ) => {
@@ -51,7 +55,7 @@ document.addEventListener( 'DOMContentLoaded', () => {
             );
             p.innerText = employee.email;
 
-            document.querySelector( '#employeeCards' )?.append( card );
+            document.querySelector( '#employee-cards' )?.append( card );
 
         } );
     } );

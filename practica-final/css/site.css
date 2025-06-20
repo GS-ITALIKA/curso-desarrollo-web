@@ -19,7 +19,7 @@
     padding: 20px;
 }
 
-h1 {
+h2 {
     text-align: center;
     margin-bottom: 30px;
 }
@@ -28,7 +28,9 @@ h1 {
     background: #23272a;
     padding: 20px;
     border-radius: 8px;
+    margin-top: 30px;
     margin-bottom: 30px;
+    width: 20%;
 }
 
 .form-section input,
@@ -47,16 +49,15 @@ h1 {
 }
 
 .form-section button {
-    background: #7289da;
+    background: #6200ea;
     color: #fff;
     cursor: pointer;
-    font-weight: bold;
 }
 
 .cards {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 30px;
     justify-content: center;
     margin-top: 30px;
 }
@@ -76,12 +77,13 @@ h1 {
 }
 
 .card h3 {
-    margin: 10px 0 5px 0;
+    margin: 10px 0px 15px 0px;
 }
 
 .card p {
     margin: 0;
     color: #b9bbbe;
+    font-size: small;
 }
 
 .img-center-round {
@@ -89,4 +91,19 @@ h1 {
     margin: 0 auto;
     border-radius: 50%;
     object-fit: cover;
+    padding-bottom: 10px;
+}
+
+.button {
+    background-color: #6200ea;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #3700b3;
 }
