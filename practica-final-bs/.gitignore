@@ -1,0 +1,5 @@
+# Ignora los módulos de Node.js
+node_modules
+
+# Ignora los archivos compilados de Typescript.
+app/js/app.*.js
