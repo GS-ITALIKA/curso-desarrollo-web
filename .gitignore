@@ -1,1 +1,9 @@
-node_modules
+# Ignorar la carpeta de los módulos de Node.js
+node_modules/*
+
+# Ignorar el archivo de bloqueo de npm.
+package-lock.json
+
+# Ignorar los archivos de JavaScript compilados.
+learning-exercises-ts/app/**/*.js
+learning-exercises-ts/app/**/js
